@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Infrastructure</title>
+    <style>
+        :root {
+            --gcp-blue: #1a73e8;
+            --gcp-gray: #f8f9fa;
+            --gcp-card-bg: #ffffff;
+            --text-main: #202124;
+            --text-muted: #5f6368;
+            --border-color: #dadce0;
+            --green-success: #1e8e3e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--gcp-gray);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Centered Header and Introduction */
+        .hero-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+            margin: 100px 0px 150px 0px;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            margin: 100px 0px 100px 0px;
+        }
+
+        .card {
+            background: var(--gcp-card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-value {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .card-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .panel {
+            background: var(--gcp-card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .panel-title {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .info-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .info-label {
+            color: var(--text-muted);
+        }
+
+        .info-value {
+            font-weight: 600;
+        }
+
+        .terminal-box {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .command {
+            color: #569cd6;
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>Google Cloud</h1>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Texto -->
+        <section class="hero-intro">
+            <h1 class="hero-title">3-Tier Infrastructure Architecture</h1>
+            <p class="hero-description">
+                This proyect aims to implement a design pattern that organizes system components into three independent tiers, ensuring network isolation, enhanced security, and modular scalability within Google Cloud Platform.
+            </p>
+        </section>
+
+        <!-- Partes? -->
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">GCP Environment</div>
+                <div class="card-value">VPC</div>
+                <div class="card-subtitle">Region: us-west1</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Web Server</div>
+                <div class="card-value">Nginx Engine</div>
+                <div class="card-subtitle">Port: 80 / TCP </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Database</div>
+                <div class="card-value">MariaDB</div>
+                <div class="card-subtitle">Port: 3306 / TCP </div>
+            </div>
+        </div>
+
+        <!-- Detalles -->
+        <div class="panel">
+            <h2 class="panel-title">Network & Tier Specifications</h2>
+            <div class="info-list">
+                <div>
+                    <div class="info-item">
+                        <span class="info-label">Web Layer:</span>
+                        <span class="info-value">Public Subnet</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Subnet CIDR Range:</span>
+                        <span class="info-value">10.0.1.0/24</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Internet Access:</span>
+                        <span class="info-value">TCP / 80 (HTTP)</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="info-item">
+                        <span class="info-label">Database Layer:</span>
+                        <span class="info-value">Private Subnet</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Database CIDR Range:</span>
+                        <span class="info-value">10.0.2.0/24</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Internal DB Port:</span>
+                        <span class="info-value">TCP / 3306 (MariaDB)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- <div class="panel">
+            <h2 class="panel-title">Internal Connection Verification (CLI)</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+                Command to validate connectivity from this instance to the private MariaDB subnet:
+            </p>
+            <div class="terminal-box">
+                <span class="comment"># Direct connection to MariaDB via CLI</span><br>
+                <span class="command">mysql</span> -h 10.0.2.X -u db_user -p
+            </div>
+        </div> -->
+
+    </div>
+
+    <footer>
+        Google Cloud Platform • VPC Architecture Lab Demo
+    </footer>
+
+</body>
+</html>
