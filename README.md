@@ -35,7 +35,7 @@ sudo apt install nginx
 
 **Service Verification:** The service was tested by accessing the public IP address from a web browser. After confirming that Nginx was working correctly by displaying the default Nginx welcome page, the `index.html` website was deployed to the `/var/www/html/` directory.
 
-# 4. Database Server Creation
+## 4. Database Server Creation
 
 **Provisioning and Connectivity:** A Compute Engine instance (Ubuntu) was created in the `10.0.2.0/24` subnet without a public IP address, meaning it does not have direct Internet connectivity. To enable package downloads from the Internet within the private subnet without exposing the database, **Cloud Router** and **Cloud NAT** were configured in GCP.
 
