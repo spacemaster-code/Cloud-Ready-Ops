@@ -33,7 +33,7 @@ sudo apt install nginx
 
 **Prueba del funcionamiento del servicio:** Se comprueba accediendo a la ip publica desde un navegador. Luego de confirmar el funcionamiento con el banner de Nginx se procede a desplegar la pagina web `index.html` en el directorio `/var/www/html/`.
 
-# 4. Creación del servidor de base de datos
+## 4. Creación del servidor de base de datos
 
 **Aprovisionamiento y Conectividad :** Se creo una instancia Compute Engine (Ubuntu) en la subred `10.0.2.0/24` sin IP pública, por lo que no dispone de conectividad directa a internet. Para eso se configuró **Cloud Router** y **Cloud NAT** en GCP para habilitar la descarga de paquetes desde Internet en la subred privada sin exponer la base de datos.
 
