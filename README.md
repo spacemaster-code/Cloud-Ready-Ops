@@ -10,7 +10,7 @@ A **custom VPC** was created, which functions as a private and isolated virtual 
 - **Public Subnet:** Hosts resources and servers that require direct exposure to the Internet. This network uses the `10.0.1.0/24` CIDR block.
 - **Private Subnet:** Encapsulates and isolates the database to prevent it from being exposed to the external network, ensuring that it only responds to requests from the internal network. This network uses the `10.0.2.0/24` CIDR block.
 
-### 2. Firewall Rules (Security Groups)
+## 2. Firewall Rules (Security Groups)
 
 Firewall rules were created to restrict inbound traffic to the servers, allowing access to specific ports from specified IP addresses. This adds an additional layer of security by controlling who can access the servers.
 Parameters for each rule:
