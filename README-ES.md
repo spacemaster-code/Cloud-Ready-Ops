@@ -9,7 +9,7 @@ Se creó una **VPC personalizada**, la cual funciona como una red virtual privad
 * **Subred Pública:** Aloja los recursos y servidores que requieren exposición directa a Internet. Esta red tiene el bloque `10.0.1.0/24`.
 - **Subred Privada:** Encapsula y aísla la base de datos para evitar que sea expuesta a la red externa, garantizando que solo respondan a peticiones de la red interna. Esta red tiene el bloque `10.0.2.0/24`.
 
-### 2. Reglas de Firewall (Grupos de seguridad)
+## 2. Reglas de Firewall (Grupos de seguridad)
 Luego se creo las reglas de firewall para restringir el trafico de entrada a los servidores, permitiendo el acceso a los puertos desde las ip especificadas. Esto agrega una capa de seguridad donde aseguramos quien puede acceder.
 Parámetros de cada regla:
 
