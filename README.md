@@ -4,6 +4,12 @@ This repository contains the architecture, configurations, and deployment steps 
 
 **Web Server Public IP:** `http://34.4.111.71`
 
+<div align="center">
+  
+![Infra](docs/arquitectura.png)
+
+</div>
+  
 ## 1. Network and Security Configuration
 
 A **custom VPC** was created, which functions as a private and isolated virtual network that allows internal communication between all components of the architecture. Two subnets were defined within this VPC:
